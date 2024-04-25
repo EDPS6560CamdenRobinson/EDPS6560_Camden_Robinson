@@ -51,41 +51,95 @@ img {
     margin: 1.3em auto;
     max-width: 95%;
 }
+.flex-container {
+    display: flex;
+    flex-direction: row;
+    flex-flow: row wrap;
+    height: fit-content;
+    border-radius: 5px;
+    gap: 8px;
 
-@keyframes colorize {
-    0% {
-        -webkit-filter: grayscale(100%);
-        filter: grayscale(100%);
-    }
-    100% {
-        -webkit-filter: grayscale(0%);
-        filter: grayscale(0%);
-    }
-}
 
-.container-fluid { 
-    background-color: rgb(152, 187, 200); border:  3px solid black ;
+  .flex-item {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    background-color:#0f167c;
+    /* width: auto; */
+    width: 240px;
+    width: calc((100% / 3) - 16px);
+    height: 400px;
+    background-color: rgba(100, 95, 95, 0.582);
+    border-radius: 25px;
+  }
+
+  @media all and (max-width: 720px) {
+    .flex-item {
+      width: calc((100% / 3) - 16px);
+    }
+  }
+
+  @media all and (max-width: 480px) {
+    .flex-item {
+    width: calc((100vw));
+  }
+}
+
+  img {
+    width: 100%;
+    height: 100px;
+    object-fit: cover;
+  }
+
+  .top {
+    border-radius: 5px;
+    width: fit-content;
+    max-width: 100%;
+    padding: 5px;
+    margin: 15px;
+  }
+
+  .project1 {
+    background-color: rgb(236, 234, 241);
+  }
+
+  .picture {
+    padding: 0px;
+    margin: 0px;
+    border-radius: 25px 25px 0 0;
+  }
+
+  .top-picture {
+    border-radius: 25px 25px 0 0;
+  }
+  .project2 {
+    background-color: lightblue;
+  }
+
+  .project3 {
+    background-color: pink;
+  }
+  .middle {
+    margin: 15px;
+  }
+  .bottom {
+    display: flex;
+    align-items: left;
+    margin: 15px;
+    justify-content: flex-start;
+  }
+  .bottom-text {
+   justify-content: flex-start;
     
   }
-  .row{
-    font-family: 'Courier New', Courier, monospace; 
 
+  .round-pic {
+    clip-path: circle();
+    width: 50px;
+    height: 50px;
+    /* padding-right: 10px; */
   }
-  .col-lg
-  {
-    border:  2px solid black;
-    border-radius: 10px;
-    background-color: #545454;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-    margin: 50px;
-    padding: 50px;
 
-
-
+  .small-bold {
+    font-weight: bold;
   }
+
+
